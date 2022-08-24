@@ -5,7 +5,6 @@
 */
 
 //Code here
-
 const Me = {
     name: 'Smartie',
     age: 27
@@ -20,7 +19,6 @@ const Me = {
   //and goodBoy/goodGirl (a boolean).
   
   //Code here
-  
   const Dog = {
     name: 'Froggie',
     color: 'white with patches of moss',
@@ -33,7 +31,6 @@ const Me = {
   /* Print out the name of the dog you created in problem 2 using dot-notation. */
   
   //Code here
-  
   // console.log(Dog.name)
   
   
@@ -41,9 +38,9 @@ const Me = {
   /* Print out the color of the dog you created in problem 2 using bracket-notation. */
   
   //Code here
-  
   // console.log(Dog['color'])
   
+
   //////////////////////////// PROBLEM 5 ////////////////////////////
   /*
     Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
@@ -51,7 +48,6 @@ const Me = {
   */
   
   //Code here
-  
   const favoriteThings = {
     band: 'black pant wash',
     food: 'sphag bowl',
@@ -68,13 +64,12 @@ const Me = {
   */
   
   //Code here
-  
-  favoriteThings.car = 'Lambo';
-  favoriteThings.show = 'Fargo';
+  favoriteThings.car = 'Beatle';
+  favoriteThings.show = 'Fawlty Towers';
   
   // console.log(favoriteThings);
   
-  // let { car, show } = favoriteThings;
+  let { car, show } = favoriteThings;
   // console.log(car);
   
   /*
@@ -83,11 +78,10 @@ const Me = {
   */
   
   //Code here
-  favoriteThings.food = "chicken Nuggets"
+  favoriteThings.food = "Chicken Nuggets"
   favoriteThings.book = "Harry Potter"
   
   // console.log(favoriteThings)
-  
   
   
   //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -106,10 +100,9 @@ const Me = {
   */
   
   //Code Here
-  
   const { color, make, model, year } = carDetails
   
-  // console.log(`My car is ${color}, is a ${make} ${model}, and was built in ${year}`)
+  // console.log(`My car is a ${color} ${make} ${model}, and was built in ${year}`)
   
   
   //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -120,27 +113,22 @@ const Me = {
     The property names are firstName, lastName, and title.
   */
   
-  // function greeting(obj) {
-  //   //Code Here
-  //   const { title, firstName, lastName, } = obj
-  //   // Do not edit the code below.
-  //   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
-  //   // Do not edit the code above.
-  // }
-  // const greetingresult = greeting({
-  //   title: "CFO",
-  //   firstName: "Neil",
-  //   lastName: "Gaiman"
-  // })
+  function greeting(obj) {
+    //Code Here
+    const { title, firstName, lastName, } = obj
+    // Do not edit the code below.
+    return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+    // Do not edit the code above.
+  }
+  const greetingresult = greeting({
+    title: "Writer",
+    firstName: "Neil",
+    lastName: "Gaiman"
+  })
   
   // console.log(greetingresult)
   
-  
-  
-  
-  
-  
-  
+
   //////////////////////////// PROBLEM 8 ////////////////////////////
   
   /*
@@ -152,20 +140,21 @@ const Me = {
   */
   
   //Code Here
-  // function totalPopulation(obj) {
-  //   const { utah, california, texas, arizona } = obj
-  //   return utah + california + texas + arizona;
-  // }
+  function totalPopulation(obj) {
+    const { utah, california, texas, arizona } = obj
+    return utah + california + texas + arizona;
+  }
   
-  // const sumPopulation = totalPopulation({
-  //   utah: 40,
-  //   california: 17,
-  //   texas: 77,
-  //   arizona: 96
-  // })
+  const sumPopulation = totalPopulation({
+    utah: 40,
+    california: 17,
+    texas: 77,
+    arizona: 96
+  })
   
-  // console.log(sumPopulation)
+  // console.log(`The total population of the listed states is ${sumPopulation}`)
   
+
   //////////////////////////// PROBLEM 9 ////////////////////////////
   
   /*
@@ -187,11 +176,13 @@ const ingredients = (obj) => {
     return array
 }
 
-let sandwich = {carb: 'bread', }
+let spamMusubi = {carb: 'Rice', fat: 'Butter', protein: 'Spam' }
 
-console.log(ingredients(sandwich))
+// console.log(ingredients(spamMusubi))
 
-// console.log(ingredients({carb: 'bread'}))
+//alt answer
+// console.log(ingredients({carb: 'Rice', fat: 'Butter', protein: 'Spam' }))
+
 
   //////////////////////////// PROBLEM 10 ////////////////////////////
   // Do not edit the code below.
@@ -205,8 +196,6 @@ console.log(ingredients(sandwich))
   };
   // Do not edit the code above.
   
-  // console.log(user)
-  
   /*
     Let's say I, the user, decided to change my name and email address to the following:
     name -> 'Bryan G. Smith' and email -> 'bryan.smith@devmounta.in'.
@@ -214,15 +203,11 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here
-  
   user.name = 'Bryan G. Smith'
   user.email = 'bryan.smith@devmounta.in'
   
   // console.log(user)
   
-  // for (let newUser in user) {
-  //   user.push()
-  // }
   
   //////////////////////////// PROBLEM 11 ////////////////////////////
   /*
@@ -230,9 +215,10 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here
-  // delete user.age
+  delete user.age
   // console.log(user)
   
+
   //////////////////////////// PROBLEM 12 ////////////////////////////
   /*
     Create a class called 'Cat'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
@@ -249,9 +235,10 @@ console.log(ingredients(sandwich))
       this.color = color;
     }
   }
-  let mittens = new Cat('mittens', 2, 'tuxedo')
-  // console.log(mittens)
+  let Charlotte = new Cat('Charlotte', 4, 'Orange Tabby')
+  // console.log(Charlotte)
   
+
   //////////////////////////// PROBLEM 13 ////////////////////////////
   /*
     Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
@@ -273,9 +260,9 @@ console.log(ingredients(sandwich))
     }
   }
   
-  let gandalfTheWhite = new Wizard('Gandalf The White', 'A millinea', 'You Shall Not Pass!')
+  let gandalfTheGrey = new Wizard('Gandalf The Grey', 'A millinea', 'You Shall Not Pass!')
   
-  gandalfTheWhite.castSpell()
+  gandalfTheGrey.castSpell()
   
   
   //////////////////////////// PROBLEM 14 ////////////////////////////
@@ -334,9 +321,9 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here
-  let iphone = new Phone('Apple', '13 Pro + X', 256, 'Space Grey', 1600000)
+  let google = new Phone('Google', 'Pixel 6', 256, 'Cloudy White', 45000)
+  // console.log(google)
 
-  console.log(iphone)
 
   /* 
     Call the changePrice function on one of your phones, 
@@ -346,9 +333,9 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here 
-  iphone.changePrice(1300)
-  
-  console.log(iphone)
+  google.changePrice(999)
+
+  // console.log(google)
 
   /*
     Now call the sell method on one of your other phone objects
@@ -357,10 +344,11 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here 
+  // google.sell()
 
-
-  console.log(iphone)
+  // console.log(google)
   
+
   //////////////////////////// PROBLEM 15 ////////////////////////////
   
   /*
@@ -378,11 +366,10 @@ console.log(ingredients(sandwich))
   //do not edit this object
   
   //Code Here 
-  const colorsCopy = {...colors, img: 'orange'}
-  console.log(colorsCopy)
+  const colorsCopy = {...colors, img: 'grey'}
+  // console.log(colorsCopy)
 
 
-  
   /*
    Now use the spread operator to combine the following 2 objects into one. 
    Call the new variable helensInfo. 
@@ -410,7 +397,7 @@ console.log(ingredients(sandwich))
   //Code Here
   const helensInfo = {...contactInfo, ...shippingInfo}
 
-  console.log(helensInfo)
+  // console.log(helensInfo)
   
   //Print helensInfo to see what it looks like, there should be no repeating properties.
   
@@ -428,8 +415,21 @@ console.log(ingredients(sandwich))
   */
   
   //Code Here 
+  class vehicle {
+    constructor (capacity, color, mileage){
+      this.capacity = capacity,
+      this.color = color,
+      this.mileage = mileage
+    }
+    move(){
+      this.mileage = `${miles} + ${mileage}`
+    }
+  }
   
-  
+  let addedMiles = new vehicle(4, 'cherry red', 300000)
+
+  vehicle.move(30)
+
   /*
     Create a vehicle using your new class and save it to a variable called myFirstVehicle
   */
